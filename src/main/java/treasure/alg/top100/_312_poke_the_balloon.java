@@ -51,7 +51,7 @@ public class _312_poke_the_balloon {
             // 观察到下面 i 最多到 n - 1，耍小聪明让第一个维度 = n，导致数组越界
             int[][] dp = new int[n + 2][n + 2];
             
-            // 我死记硬背的玩意儿
+            // 死记硬背的
             // 完全没搞懂
 //            for (int left = 0; left < n + 1; left++) {
 //                for (int right = n + 1; right > left + 1; right--) {
