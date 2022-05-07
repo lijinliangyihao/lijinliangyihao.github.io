@@ -1,33 +1,47 @@
 package treasure;
 
-import java.util.concurrent.Exchanger;
-import java.util.concurrent.atomic.AtomicStampedReference;
-import java.util.concurrent.locks.AbstractQueuedSynchronizer;
+import java.util.concurrent.Flow;
+import java.util.concurrent.Flow.Subscription;
+import java.util.concurrent.SubmissionPublisher;
 
 public class Play {
     
     public static void main(String[] args) throws Exception {
+        SubmissionPublisher<Integer> publisher = new SubmissionPublisher<>();
     
-        Exchanger<String> e = new Exchanger<>();
+        Flow.Processor p ;
         
-        Thread t1 = new Thread(() -> {
-            try {
-                String res = e.exchange("caonima");
-                System.out.println("t2 说：" + res);
-            } catch (InterruptedException ex) {
-                ex.printStackTrace();
+        publisher.subscribe(new Flow.Subscriber<>() {
+            Subscription sub;
+            @Override
+            public void onSubscribe(Subscription subscription) {
+                sub = subscription;
+                sub.request(1);
+            }
+    
+            @Override
+            public void onNext(Integer item) {
+                System.out.println(item);
+                sub.request(1);
+            }
+    
+            @Override
+            public void onError(Throwable throwable) {
+        
+            }
+    
+            @Override
+            public void onComplete() {
+        
             }
         });
-        Thread t2 = new Thread(() -> {
-            try {
-                String res = e.exchange("滚你妈的");
-                System.out.println("t1 说：" + res);
-            } catch (InterruptedException ex) {
-                ex.printStackTrace();
-            }
-        });
-        t1.start();
-        t2.start();
         
+        publisher.submit(11);
+        publisher.submit(11);
+        publisher.submit(11);
+        publisher.submit(11);
+        publisher.submit(11);
+    
+        Thread.sleep(999999);
     }
 }
