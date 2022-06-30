@@ -1,5 +1,3 @@
 ### what happen?
 
-name|age
-:-|:-
-zhangsan|31
+ [es-经验之谈](typora/es-经验之谈.md)

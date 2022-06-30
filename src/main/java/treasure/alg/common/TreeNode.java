@@ -9,12 +9,17 @@ public class TreeNode {
         val = x;
     }
     
+    /**
+     <p>2
+     <p> 1 3
+     <p>  &nbsp;&nbsp;4  5
+    * */
     public static TreeNode gen() {
-        TreeNode root = new TreeNode(5);
+        TreeNode root = new TreeNode(2);
         TreeNode root1 = new TreeNode(1);
-        TreeNode root2 = new TreeNode(4);
-        TreeNode root3 = new TreeNode(3);
-        TreeNode root4 = new TreeNode(6);
+        TreeNode root2 = new TreeNode(3);
+        TreeNode root3 = new TreeNode(4);
+        TreeNode root4 = new TreeNode(5);
         root.left = root1;
         root.right = root2;
         root2.left = root3;
