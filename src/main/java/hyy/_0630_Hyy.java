@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * 2022.6.30
  */
-public class Hyy0630 {
+public class _0630_Hyy {
 
     public static void main(String[] args) {
         int[] nums = {3,2,4};

@@ -3,7 +3,7 @@ package hyy;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RomanToInt0703 {
+public class _0703_RomanToInt {
     public static void main(String[] args) {
         System.out.println(romanToInt("III"));
         System.out.println(romanToInt("IV"));

@@ -1,6 +1,6 @@
 package hyy;
 
-public class Hyy0701 {
+public class _0701_Hyy {
 
     public static void main(String[] args) {
         int rev = reverse(123);

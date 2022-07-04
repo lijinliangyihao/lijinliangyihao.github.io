@@ -1,6 +1,6 @@
 package hyy;
 
-public class Plaindroom0702 {
+public class _0702_Plaindroom {
     public static void main(String[] args) {
         isPalindroomByMyself(121);
         isPlainroomByOfficial(123);
