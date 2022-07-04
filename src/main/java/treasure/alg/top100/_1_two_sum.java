@@ -7,7 +7,7 @@ import java.util.Map;
  * 这个题做错了我是没想到的
  * 难道我只配拿 13k
  * */
-public class _1_2_sum {
+public class _1_two_sum {
     
     // 做这个题就是浪费我时间
     public int[] twoSum_wrong(int[] nums, int target) {
