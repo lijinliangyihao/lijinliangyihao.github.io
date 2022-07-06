@@ -2,6 +2,8 @@ package treasure.alg.top100;
 
 import treasure.alg.common.TreeNode;
 
+import java.util.LinkedList;
+
 public class _617_merge_binary_tree {
     
     /*
@@ -36,8 +38,20 @@ public class _617_merge_binary_tree {
     }
     
     /*
-    * TODO 广度优先还没看答案
+    我的思路是，修改左树，返回左树
+    我思路不行，用别人的思路把还是，不会搞
+    虽然别人三个队列，看起来比较傻逼，我这个搞不出来，难道就不傻逼了吗
     * */
-    
+    public TreeNode mergeTrees_iterate(TreeNode left, TreeNode right) {
+        if (left == null) return right;
+        if (right == null) return left;
+        LinkedList<TreeNode> queue = new LinkedList<>();
+        queue.offer(left);
+        queue.offer(right);
+        while (!queue.isEmpty()) {
+        
+        }
+        return left;
+    }
     
 }
